@@ -102,7 +102,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 
 const TOTAL_FRAMES = 5;
-const START_DELAY = 500; // 0.4 秒延遲
+const START_DELAY = 700; // 0.4 秒延遲
 
 const Scene = () => {
   const [frame, setFrame] = useState(1);
@@ -156,7 +156,7 @@ const Scene = () => {
         <h1 className="archivo-black-regular trinity-title no-select">S P L I T</h1>
         <h2 className="archivo-black-regular hi-capa-title no-select" style={{
           opacity: 0,
-    animation: "fadeIn 0.4s ease 0.2s forwards", // animationName duration timingFunction delay fillMode
+    animation: "fadeIn 0.6s ease 0.2s forwards", // animationName duration timingFunction delay fillMode
         }}>
           Hi-CAPA
         </h2>
