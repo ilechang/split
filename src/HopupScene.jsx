@@ -164,15 +164,15 @@ const HopupScene = () => {
           <video
             key={withHop ? "with" : "without"}
             ref={videoRef}
-            src={withHop ? "./withhop.mp4" : "./withouthop.mp4"}
+            src={withHop ? "./withhop.webm" : "./withouthop.mp4"}
             autoPlay
             muted
             loop
             playsInline
             onLoadedData={() => setIsVideoLoaded(true)}
             style={{
-              width: "102%",
-              height: "100%",
+              width: "100%",
+              
               objectFit: "cover",
               objectPosition: "top",
               display: isVideoLoaded ? "block" : "none",
