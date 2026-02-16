@@ -20,31 +20,33 @@ const problems = [
 ];
 
 const designGoals = [
-    {
-        title: "Lightweight Structure & Aesthetics",
-        text: "Skeletonized cutouts reduce weight while adding visual appeal."
-    },
-    {
-        title: "Improved Hop-up Mechanism",
-        text: "Quick-adjust hop-up for faster and easier operation."
-    },
-    {
-        title: "Competition Trigger",
-        text: "Short-travel trigger for enhanced stability in rapid fire."
-    },
-    {
-        title: "Complete Competition Kit",
-        text: "Modular kit for competitive players to upgrade all components."
-    },
-    {
-        title: "Standalone Parts Retail",
-        text: "Key parts available individually for repair or upgrade."
-    },
-    {
-        title: "Cost Efficiency",
-        text: "Compatibility with existing production parts lowers costs."
-    }
+  {
+    title: "Extended Barrel System",
+    text: "Increase barrel length to achieve submachine-gun-level range and overcome the limitations of standard pistols."
+  },
+  {
+    title: "Split-Slide Mechanism",
+    text: "Enable faster cycling and reduced recoil for improved control and quicker target reacquisition."
+  },
+  {
+    title: "Fixed Optic Mount",
+    text: "Stabilize the optic independently from slide movement for better durability and target acquisition."
+  },
+  {
+    title: "Magazine Compatibility",
+    text: "Support TM-spec Hi-Capa magazines for seamless adoption and user convenience."
+  },
+  {
+    title: "High Parts Interchangeability with Trinity Hi-Capa",
+    text: "Maximize component compatibility with Trinity Hi-Capa to improve efficiency and consistency."
+  },
+  {
+    title: "Standalone Parts Retail",
+    text: "Provide key components individually for repair and upgrade without purchasing a full pistol."
+  }
 ];
+
+
 
 const designProcess = [
     {
@@ -103,6 +105,62 @@ const designProcess = [
     }
 ];
 
+const playerInterviews = [
+    {
+        title: "Tony Tzeng, 30",
+        text: `<strong>Primary Rifle:</strong> HK416 (Electric)
+
+<strong>Primary Pistol:</strong> Glock 17 (Gas Blowback)
+
+<strong>Field Type:</strong> 50% Outdoor / 50% Indoor CQB
+
+"I don't have confidence in pistol accuracy. I believe such a short barrel means limited range, which makes it hard for me to trust it. If my rifle runs out of ammo and the situation allows, I would rather carry extra rifle magazines and take cover to reload than switch to a pistol and continue fighting."
+
+<strong>Pistol Usage</strong>: ~10% (only in emergencies when rifle runs dry).
+
+<strong>Pain Points:</strong> Low pistol accuracy, lack of psychological confidence, rarely used.
+
+<strong>Wish / Need:</strong> A pistol that is accurate and reliable enough to function as a true backup weapon.
+`
+    },
+    {
+        title: "Tim Lodu, 35",
+        text: `<strong>Primary Rifle:</strong> M4 (Gas Blowback), SCAR-H(Gas Blowback)
+
+<strong>Primary Pistol:</strong> None
+
+<strong>Field Type:</strong> 100% Outdoor 
+
+"I mainly carry an M4 GBB with five extra magazines. Since rifle magazines are already heavy, adding a pistol creates extra weight without clear practical value. The iron sights on pistols are also not as effective as the optics mounted on my rifle, so I prefer not to carry one."
+
+<strong>Pistol Usage</strong>: 0% (does not use one due to limited effectiveness and added weight).
+
+<strong>Pain Points:</strong> Added weight with low functional value, lack of optics.
+
+<strong>Wish / Need:</strong> Lighter gear or a pistol with clear added functional value.
+`
+    },
+    {
+        title: "Kevin Lu, 28",
+        text: `<strong>Primary Rifle:</strong> AUG (Gas Blowback)
+
+<strong>Primary Pistols:</strong> Glock 34, Hi-Capa 5.1
+
+<strong>Field Type:</strong> 80% Outdoor / 20% Indoor CQB
+
+"I prefer longer-barrel platforms to improve accuracy and range, especially at my usual outdoor fields where engagement distances can reach 50–100 meters. For the same reason, I choose the Glock 34 as my sidearm instead of shorter models like the G17 or G19."
+
+
+<strong>Pistol Usage</strong>: ~25% (frequently used indoors or within 30 meters). 
+
+<strong>Pain Points:</strong> Standard pistols lack sufficient accuracy for longer engagement distances.
+
+<strong>Wish / Need:</strong> A pistol with higher precision and range to effectively complement the rifle.
+`
+    }
+];
+
+
 
 export default function Research() {
     return (
@@ -134,65 +192,66 @@ export default function Research() {
                     }}
                 >
                     {/* Project Overview */}
-                    <div className="d-flex flex-column flex-sm-row align-items-start my-5">
-                        <img
-                            src="./images/modify.jpg"
-                            alt="Modify Logo"
-                            className="me-3 mb-3 mb-sm-0"
-                            style={{ width: "120px" }}
-                        />
+                    <div className="d-flex flex-column flex-sm-row align-items-start mt-4 mb-3">
+
                         <div className="text-white rounded ms-sm-3 mb-5">
                             <h2 className="fw-bold text-start mb-3">Project Overview</h2>
                             <p className="mb-4 text-start">
-                                Modify has historically specialized in airsoft upgrade parts. This
-                                project represents a key milestone in the brand’s transition toward
-                                becoming a complete firearm manufacturer. It is the first full pistol
-                                developed and launched by Modify.
+                                In airsoft, pistols are often treated as secondary weapons, limited by their firepower compared to rifles and submachine guns. This project takes the Trinity Hi-Capa as its foundation and redesigns it as a primary combat pistol, engineered for submachine-gun-level performance—transforming the pistol from a support tool into a standalone battlefield weapon.
                             </p>
                         </div>
                     </div>
 
 
-                    <div className="d-flex flex-column flex-sm-row align-items-start my-5">
-                        <img
-                            src="./images/tpsa1.webp"
-                            alt="Modify Logo"
-                            className="me-3 mb-3 mb-sm-0"
-                            style={{ width: "120px" }}
-                        />
-                        <div className="text-white rounded ms-sm-3 mb-5">
-                            <h2 className="fw-bold text-start mb-3">Collaboration</h2>
-                            <p className="mb-4 text-start">
-                                We collaborated with the Taiwan Practical Shooting Association(TPSA) and
-                                interviewed several champion shooters. Based on their professional
-                                insights, we selected the widely popular Tokyo Marui Hi-Capa system—
-                                favored by both competitive shooters and airsoft skirmish players—
-                                as the foundation for our design improvements.
-                            </p>
-                        </div>
-                    </div>
-
-
-           
-
-                    {/* Problems */}
-                    <h2 className="text-center my-3 fw-bold">Problem Identification</h2>
+                    {/* interviews         */}
+                    <h2 className="text-center mb-4 mt-0 fw-bold">Player Interviews</h2>
                     <div className="row g-4 mb-3">
-                        {problems.map((item, index) => (
-                            <div key={index} className="col-md-3 col-sm-6">
+                        {playerInterviews.map((item, index) => (
+                            <div key={index} className="col-md-4 col-sm-6">
                                 <div
                                     className="card h-100 border border-white rounded-3 py-3"
                                     style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
                                 >
-                                    <div className="card-body text-center">
-                                        <h5 className="text-white fw-bold">{item.title}</h5>
-                                        <h4 className="text-white fw-bold m-0 p-0">-</h4>
-                                        <p className="card-text text-white">{item.text}</p>
+                                    <div className="card-body text-start ">
+                                        <h4 className="text-white fw-bold ">{item.title}</h4>
+                                        <hr className="text-white" />
+                                        <p
+                                            className="card-text text-white "
+                                            style={{
+                                                whiteSpace: "pre-line",
+                                                lineHeight: "2"
+                                            }}
+                                            dangerouslySetInnerHTML={{ __html: item.text }}
+                                        />
                                     </div>
                                 </div>
                             </div>
                         ))}
                     </div>
+                    {/* Summary */}
+                    <div className="row mb-5">
+                        <div className="col-12">
+                            <div
+                                className="border border-white rounded-3 p-4"
+                                style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
+                            >
+                                <h4 className="text-white fw-bold mb-3">Summary</h4>
+                                <ul
+                                    className="text-white mb-0 ps-0"
+                                    style={{
+                                        lineHeight: "1.7",
+                                        listStyle: "none"
+                                    }}
+                                >
+
+                                    <li>• Pistols are perceived as unreliable due to limited accuracy and effective range.</li>
+                                    <li>• Pistols are harder to aim compared to rifles equipped with optics.</li>
+                                    <li>• Carrying a pistol adds extra weight without delivering proportional value.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
 
                     {/* Design Goals */}
                     <div className="container my-5 py-4">
@@ -215,60 +274,7 @@ export default function Research() {
                         </div>
                     </div>
 
-                    <div className="container my-4 py-4">
-                        <h2 className="text-center fw-bold mb-3">Design Process</h2>
-                        {designProcess.map((step, index) => (
-                            <div
-                                key={index}
-                                className="card border border-white rounded-3 p-3 mb-4"
-                                style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
-                            >
-                                <div className="card-body">
-                                    <div className="row align-items-center">
-                                        {/* 日期 col-2 */}
-                                        <div className="col-md-4 mb-3 ">
-                                            {step.time && (
-                                                <h4 className="text-white fw-bold text-md-center text-start m-0">
-                                                    {step.time}
-                                                </h4>
-                                            )}
-                                        </div>
-
-                                        {/* 文字 col-6 */}
-                                        <div className="col-md-7 mb-3 mb-md-0">
-                                            <h5 className="text-white fw-bold text-start ">{step.title}</h5>
-                                            {Array.isArray(step.text) && (
-                                                <ul className="text-white text-start m-0">
-                                                    {step.text.map((line, i) => (
-                                                        <li key={i}>{line}</li>
-                                                    ))}
-                                                </ul>
-                                            )}
-                                        </div>
-
-                                        {/* 圖片 col-4 */}
-                                        {/* 圖片 col-4 */}
-                                        <div className="col-md-4 d-flex justify-content-center justify-content-md-end gap-3 flex-wrap flex-lg-nowrap">
-                                            {Array.isArray(step.pics) &&
-                                                step.pics.length > 0 &&
-                                                step.pics.map((img, i) => (
-                                                    <img
-                                                        key={i}
-                                                        src={img}
-                                                        alt={`Step Visual ${i + 1}`}
-                                                        className="rounded shadow"
-                                                        style={{ width: "50%", height: "auto" }}
-                                                    />
-                                                ))}
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-
+                   
                 </div>
             </div>
             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

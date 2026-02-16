@@ -4,11 +4,10 @@ const HopupScene = () => {
   const [shouldRender, setShouldRender] = useState(false);
   const [withHop, setWithHop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false); // ✅ 影片載入狀態
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const ref = useRef();
   const videoRef = useRef();
 
-  // 偵測螢幕寬度
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
     handleResize();
@@ -16,7 +15,6 @@ const HopupScene = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // IntersectionObserver 控制影片渲染
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -31,7 +29,6 @@ const HopupScene = () => {
     return () => observer.disconnect();
   }, []);
 
-  // 播放速度設定
   useEffect(() => {
     if (shouldRender && videoRef.current) {
       videoRef.current.playbackRate = 1;
@@ -53,7 +50,7 @@ const HopupScene = () => {
           wordBreak: "break-word",
         }}
       >
-        Hop-up Adjustment
+        Adjustable Hop-up
       </h2>
 
       <p
@@ -72,89 +69,67 @@ const HopupScene = () => {
 
       <hr style={{ borderColor: "white" }} />
 
-      <p
-        className="mb-5 mx-auto"
-        style={{
-          textAlign: "center",
-          fontFamily: "Arial, sans-serif",
-          marginTop: "2rem",
-          color: "white",
-          padding: "0 2rem",
-          maxWidth: "1400px",
-        }}
-      >
-        Hop-up is a device that applies friction to the top of a BB, creating backspin, which
-        generates lift through the Magnus effect, thereby increasing the effective range of low
-        muzzle velocity airsoft guns.
-      </p>
-
-      {/* 左文字 + 右圖片 */}
+      {/* ✅ 統一寬度容器（背景介紹 + 主文） */}
       <div
         style={{
-          display: "flex",
-          flexWrap: "wrap",
           width: "100%",
-          maxWidth: "1600px",
-          margin: "20px auto",
-          alignItems: "flex-start",
+          maxWidth: "1000px",
+          margin: "0 auto",
           color: "white",
         }}
       >
-        {/* 左側文字 */}
-        <div
-          style={{
-            flex: "1 1 600px",
-            minWidth: isMobile ? "100%" : "300px",
-            maxWidth: "100%",
-            boxSizing: "border-box",
-            padding: isMobile ? "0 1rem" : "0 2rem",
-          }}
-        >
-          <h5 className="section-title">What is the problem?</h5>
-          <p className="section-text">
-            Adjusting Hop-Up on a traditional airsoft pistol takes a lot of effort. Users either
-            have to use a special tool, or they have to take the gun apart in order to reach it.
-          </p>
-
-          <h5 className="section-title">Our Solution</h5>
-          <p className="section-text">
-            The Trinity Hop-Up system turns the slide release(E) into an adjustment key. With the
-            teeth(e) on the other end of it engaging the gear(B) inside the Hop-Up unit, it allows
-            users quick adjustment without extra tools.
-          </p>
-
-          <img
-            className="mb-4"
-            src="./images/illa.webp"
-            style={{ width: "100%", marginTop: "20px", height: "auto" }}
-            alt="Hop-Up System"
-          />
-        </div>
-
-        {/* 右側圖片 */}
-        <div
-          style={{
-            flex: "1 1 300px",
-            minWidth: isMobile ? "100%" : "250px",
-            textAlign: "center",
-            padding: isMobile ? "1rem" : "0",
-          }}
-        >
-          <img
-            src="./images/hop1.webp"
-            alt="Hop-Up Detail"
+       <div
+  style={{
+    boxSizing: "border-box",
+    padding: isMobile ? "0 1rem" : "0 2rem",
+    textAlign: "left",   // 🔥 改這裡
+  }}
+>
+          {/* 背景介紹 */}
+          <p
+            className="mb-5"
             style={{
-              width: isMobile ? "100%" : "80%",
-              maxWidth: "400px",
-              display: "block",
-              margin: "0 auto",
-              height: "auto",
+              fontFamily: "Arial, sans-serif",
+              marginTop: "2rem",
             }}
-          />
+          >
+            Hop-up is a device that applies friction to the top of a BB,
+            creating backspin, which generates lift through the Magnus effect,
+            thereby increasing the effective range of low muzzle velocity
+            airsoft guns.
+          </p>
+
+          {/* 主文 */}
+          <h5 className="fw-bold">What is the problem?</h5>
+          <p className="">
+            Adjusting Hop-Up on a traditional airsoft pistol takes a lot of effort.
+            Users either have to use a special tool, or they have to take the gun
+            apart in order to reach it.
+          </p>
+
+          <h5 className="mt-4 fw-bold">Our Solution</h5>
+          <p className="">
+            The Hop-Up system turns the slide release (E) into an
+            adjustment key. With the teeth (e) on the other end engaging the gear
+            (B) inside the Hop-Up unit, it allows users quick adjustment without
+            extra tools.
+          </p>
+
+          <img
+  className="mb-4"
+  src="./images/illa.webp"
+  style={{
+    display: "block",
+    margin: "20px auto",
+    width: isMobile ? "100%" : "80%",
+    height: "auto",
+  }}
+  alt="Hop-Up System"
+/>
         </div>
       </div>
 
-      {/* 影片 + 按鈕 */}
+      {/* 影片區塊（完全保留） */}
       {shouldRender && (
         <div
           style={{
@@ -167,7 +142,6 @@ const HopupScene = () => {
             alignItems: "center",
           }}
         >
-          {/* ✅ Spinner while loading */}
           {!isVideoLoaded && (
             <div
               style={{
@@ -195,17 +169,16 @@ const HopupScene = () => {
             muted
             loop
             playsInline
-            onLoadedData={() => setIsVideoLoaded(true)} // ✅ 載入完成才隱藏 spinner
+            onLoadedData={() => setIsVideoLoaded(true)}
             style={{
               width: "102%",
               height: "100%",
               objectFit: "cover",
               objectPosition: "top",
-              display: isVideoLoaded ? "block" : "none", // ✅ 避免黑屏
+              display: isVideoLoaded ? "block" : "none",
             }}
           />
 
-          {/* 疊在影片上的按鈕 */}
           {isVideoLoaded && (
             <div
               style={{
@@ -235,7 +208,7 @@ const HopupScene = () => {
               <button
                 className="btn btn-outline-light px-4 rounded-0"
                 onClick={() => {
-                  setIsVideoLoaded(false); // 切換時重新進入 loading 狀態
+                  setIsVideoLoaded(false);
                   setWithHop((prev) => !prev);
                 }}
               >
@@ -250,12 +223,6 @@ const HopupScene = () => {
 };
 
 export default HopupScene;
-
-
-
-
-
-
 
 
 

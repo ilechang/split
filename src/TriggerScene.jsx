@@ -96,7 +96,7 @@ const TriggerScene = () => {
           maxWidth: "1400px",
         }}
       >
-        The Trinity match grade trigger system has a super short trigger pull (only 1mm) and resets in a split second.
+        The trigger system has a super short trigger pull (only 1mm) and resets in a split second.
         This not only makes rapid fire easier, but also increases the accuracy of the first and follow-up shots, making it the best choice in shooting competitions and close-quarters combat (CQB).
       </p>
 
