@@ -292,7 +292,7 @@ export default function Research() {
             >
 
                 <img
-                    src="/images/123.webp"
+                    src="/images/split.webp"
                     alt="Bottom Decoration"
                     style={{
                         width: "100%",

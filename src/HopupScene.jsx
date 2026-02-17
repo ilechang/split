@@ -164,7 +164,7 @@ const HopupScene = () => {
           <video
             key={withHop ? "with" : "without"}
             ref={videoRef}
-            src={withHop ? "./withhop.webm" : "./withouthop.mp4"}
+            src={withHop ? "./barrel.webm" : "./withhop.webm"}
             autoPlay
             muted
             loop
