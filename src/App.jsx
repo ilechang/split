@@ -6,7 +6,7 @@
 
 
 import HopupScene from "./HopupScene";
-
+import SplitSlide from "./SplitSlide"
 import { useEffect, useState } from "react";
 import "./styles.css";
 
@@ -79,10 +79,14 @@ function App() {
           <Detail />
         </div>
 
+        <div className="fifthSection" >
+          <SplitSlide />
+        </div>
         <div className="fifthSection">
           <TriggerScene />
         </div>
-         <div           className=""           style={{ background: "rgb(31,31,31)" }}         >           <HopupScene />
+        <div className="" style={{ background: "rgb(31,31,31)" }}>
+          <HopupScene />
         </div>
 
 
