@@ -1,7 +1,74 @@
-import { useEffect, useState } from "react";
+
+
+
+
+
+
+
+
+
+
+import { useEffect, useRef, useState } from "react";
+
+
+
 
 const SplitSlide = () => {
   const [isMobile, setIsMobile] = useState(false);
+
+
+const videoRef = useRef(null);
+  const [showReplay, setShowReplay] = useState(false);
+
+useEffect(() => {
+  const video = videoRef.current;
+  if (!video) return;
+
+  const START_OFFSET = 0.05;
+  const END_OFFSET = 0.05;
+  const HOLD_DELAY = 800;
+
+  let holding = false; // 防止重複觸發
+
+  const handleLoaded = () => {
+    video.currentTime = START_OFFSET;
+    video.play();
+  };
+
+  const handleTimeUpdate = () => {
+    if (
+      !holding &&
+      video.duration &&
+      video.duration - video.currentTime <= END_OFFSET
+    ) {
+      holding = true;
+      video.pause(); // 定格在最後一幕
+
+      setTimeout(() => {
+        setShowReplay(true); // 延遲後顯示按鈕
+        holding = false;     // 重置，讓下次播放還能觸發
+      }, HOLD_DELAY);
+    }
+  };
+
+  video.addEventListener("loadedmetadata", handleLoaded);
+  video.addEventListener("timeupdate", handleTimeUpdate);
+
+  return () => {
+    video.removeEventListener("loadedmetadata", handleLoaded);
+    video.removeEventListener("timeupdate", handleTimeUpdate);
+  };
+}, []);
+
+
+  const handleReplay = () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    setShowReplay(false);
+    video.currentTime = 0.05;
+    video.play();
+  };
 
   useEffect(() => {
     const checkMobile = () => {
@@ -105,18 +172,48 @@ const SplitSlide = () => {
 
     {/* 右邊影片 */}
     <div className="col-12 col-md-6 text-center">
+<div style={{ position: "relative", width: "120%" }}>
       <video
+        ref={videoRef}
         src="/opticAnimation.webm"
-        autoPlay
         muted
-        loop
         playsInline
         style={{
-          width: "120%",
+          width: "100%",
           height: "auto",
           objectFit: "contain"
         }}
       />
+
+      {showReplay && (
+        <button
+              onClick={() => {
+      const video = videoRef.current;
+      setShowReplay(false);
+      video.currentTime = 0.05;
+      video.play();
+    }}
+          style={{
+            position: "absolute",
+            top: "65%",
+            left: "52%",
+            transform: "translate(-50%, -50%)",
+            padding: "12px 24px",
+            fontSize: "16px",
+             background: "rgba(100,100,100,0.6)",   // 灰色半透明
+      color: "white",
+      border: "2px solid white",            // 白色邊框
+      backdropFilter: "blur(6px)", 
+            color: "white",
+            border: "none",
+            cursor: "pointer"
+          }}
+        >
+          Play Again
+        </button>
+      )}
+    </div>
+
     </div>
 
   </div>
