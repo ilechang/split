@@ -15,7 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Detail from "./Detail";
 import Barrel from "./Barrel";
 import TriggerScene from "./TriggerScene";
-
+import Value from "./Value";
 
 import Scene from "./Scene";
 
@@ -103,7 +103,7 @@ function App() {
 
         <div className="" style={{ background: "rgb(31,31,31)" }}>
           <Value />
-        </div>
+        </div> 
 
 
 

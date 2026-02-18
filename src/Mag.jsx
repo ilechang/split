@@ -100,7 +100,7 @@ const Mag = () => {
 
       <div className="trigger-img-container">
   <img
-  src="./images/magCompatable.jpg"
+  src="./images/magCompatable.webp"
   alt="Trigger View"
   style={{
     width: "100vw",
