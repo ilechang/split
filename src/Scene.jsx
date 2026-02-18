@@ -169,7 +169,7 @@ const Scene = () => {
             Project Type : Platform Extension Concept (Based on Trinity Hi-CAPA)
           </p>
           <p className="landing-p archivo-black-thin">
-            Role : User Research · CAD Modeling · Mechanical · Appearance Design
+            Role : User Research · CAD Modeling · Mechanical & Ergonomic Design
           </p>
           <p className="landing-p archivo-black-thin">
             Tools : SolidWorks · KeyShot
