@@ -166,7 +166,7 @@ const HopupScene = () => {
             src="./images/illa.webp"
             style={{
               display: "block",
-              margin: "20px auto",
+              margin: "60px auto 0px auto",
               width: isMobile ? "100%" : "80%",
               height: "auto",
             }}
@@ -185,6 +185,7 @@ const HopupScene = () => {
             width: "100%",
             flexDirection: isMobile ? "column" : "initial",
             alignItems: "center",
+        
           }}
         >
           {!isVideoLoaded && (
