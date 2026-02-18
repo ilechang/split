@@ -153,16 +153,17 @@ useEffect(() => {
           width: "80vw",
           height: "auto",
           display: "block",
-          margin: "0 auto 120px auto"
+          margin: "0 auto 80px auto"
         }}
       />
-
+<hr />
       <div
-        className="container-fluid mb-5 px-4 px-md-5"
+        className="container-fluid  px-4 px-md-5"
         style={{
-          marginTop: "-120px"
+          
         }}
       >
+        
         <div className="row align-items-start">
 
           {/* 左邊圖片 */}
@@ -178,7 +179,7 @@ useEffect(() => {
             <p
               style={{
                 width: "90%",
-                margin: "60px auto 30px auto",
+                margin: "0px auto 30px auto",
                 color: "black",
                 fontWeight: 500,
                 fontFamily: "Arial, sans-serif"

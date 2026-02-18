@@ -9,11 +9,11 @@ import HopupScene from "./HopupScene";
 import SplitSlide from "./SplitSlide"
 import { useEffect, useState } from "react";
 import "./styles.css";
-
+import Mag from "./Mag";
 import Research from "./Research";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Detail from "./Detail";
-
+import Barrel from "./Barrel";
 import TriggerScene from "./TriggerScene";
 
 
@@ -82,20 +82,27 @@ function App() {
         <div className="fifthSection" >
           <SplitSlide />
         </div>
+
+   <div className="">
+          <Barrel style={{ background: "rgb(31,31,31)" }}/>
+        </div>
+
         <div className="fifthSection">
           <TriggerScene />
         </div>
+
         <div className="" style={{ background: "rgb(31,31,31)" }}>
           <HopupScene />
         </div>
 
+ <div className="fifthSection">
+          <Mag />
+        </div>
 
-        <div
-          style={{
-            background: "linear-gradient(180deg, rgb(31,31,31) 0%, rgb(160,160,160) 100%)",
-          }}
-        >
 
+
+        <div className="" style={{ background: "rgb(31,31,31)" }}>
+          <Value />
         </div>
 
 

@@ -24,15 +24,14 @@ export default function Detail() {
 
   // ✅ 所有點的位置與內容
   const positions = [
-    { key: "Magazine", x: 84.6, y: 45.4, desc: "30rd/50rd Magazine (Green gas/CO2)", img: "./images/mag.webp" },
-    { key: "ThumbSafety", x: 41, y: 25.7, desc: "Stainless Steel Ambidextrous Thumb safety", img: "./images/thumbsafty.webp" },
-    { key: "BarrelThread", x: 22.2, y: 90, desc: "Threaded muzzle(M11 CW Female Thread) allows for attachment of accessories.", img: "./images/muzzle.jpg" },
-
-    { key: "HopUp", x: 52.2, y: 53, desc: "Patented Quickly-Adjustable Hop-Up System", img: "./images/hop1.webp" },
+    { key: "Magazine", x: 81.6, y: 45.4, desc: "30rd/50rd Magazine (Green gas/CO2)", img: "./images/mag.webp" },
+    { key: "ThumbSafety", x: 48, y: 22.9, desc: "Stainless Steel Ambidextrous Thumb safety", img: "./images/thumbsafty.webp" },
+      { key: "HopUp", x: 59.5, y: 47, desc: "Patented Quickly-Adjustable Hop-Up System", img: "./images/hop1.webp" },
    
-    { key: "Frame", x: 49.5, y: 79.5, desc: "Stainless Steel Middle Frame with Tactical Rail", img: "./images/light.webp" },
-    { key: "Slide", x: 47, y: 49.5, desc: "7075 Aluminum Alloy Light-Weight Slide", img: "./images/slide.jpg" },
-    { key: "RearSight", x: 52.4, y: 18.1, desc: "The rear sight can be replaced with an optic mount or a charging handle.", img: "./images/opticmount1.webp" }
+    { key: "Frame", x: 57.5, y: 66, desc: "Stainless Steel Middle Frame with Tactical Rail", img: "./images/light.webp" },
+    { key: "Optic Mount", x: 47.5, y: 45.5, desc: "Fixed Optic Mount — stabilizing the optic independently from slide movement for improved durability and faster target acquisition.", img: "./images/slide.jpg" },
+     { key: "Slide", x: 52.4, y: 18.1, desc: "7075 Aluminum Alloy Light-Weight Split Slide.", img: "./images/slide.jpg", img: "./images/opticmount1.webp" },
+   { key: "Barrel", x: 31.6, y: 79.1, desc: "A 6.5-inch fixed inner barrel — with a length approaching that of a submachine gun — significantly extends the effective range to 50 meters!", img: "./images/slide.jpg", img: "./images/opticmount1.webp" },
   ];
 
   return (
@@ -63,11 +62,12 @@ export default function Detail() {
             Technical Breakdown
           </h2>
 
-          <div style={{ position: "relative", display: "inline-block" }} className="mt-5">
+          <div style={{ position: "relative", display: "inline-block" }} className="mt-0">
             <img
-              src="./images/hicapa說明.webp"
+              src="./images/details.png"
               alt="Hicapa 說明"
               className="w-75 "
+              
             />
 
             {/* 🔴 動態生成 hotspots */}
@@ -77,16 +77,8 @@ export default function Detail() {
                 theme="light-border"
                 interactive={true}
                 content={
-                  <div style={{ textAlign: "center", maxWidth: "300px" }}>
-                    <img
-                      src={pos.img}
-                      alt={pos.key}
-                      style={{
-                        maxWidth: "100%",
-                        marginBottom: "8px",
-                        display: "block"
-                      }}
-                    />
+                  <div style={{ textAlign: "center", maxWidth: "300px", padding:"10px" }}>
+                   
                     <div style={{ fontSize: "15px", color: "black" }}>
                       {pos.desc}
                     </div>
