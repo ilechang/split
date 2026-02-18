@@ -95,7 +95,7 @@ const Mag = () => {
           maxWidth: "1400px",
         }}
       >
-       To enhance firepower, the Split Hi-Capa utilizes a 50-round extended magazine to provide increased ammunition capacity. Additionally, to maximize compatibility, the system supports  Marui-spec magazines, allowing Hi-Capa magazines from various manufacturers — including Marui, WE, AW, KJ, and SRC — to be used interchangeably.
+       To enhance firepower, the Split Hi-Capa takes the 50-round extended magazine to provide increased ammunition capacity. Additionally, to maximize compatibility, the system supports  Marui-spec magazines, allowing Hi-Capa magazines from various manufacturers — including Marui, WE, AW, KJ, and SRC — to be used interchangeably.
       </p>
 
       <div className="trigger-img-container">

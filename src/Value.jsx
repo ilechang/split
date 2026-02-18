@@ -61,7 +61,7 @@ const Value = () => {
             className="mb-0 pb-0"
           >
             75% of the components are shared with the Trinity Hi-Capa
-            (see the common parts list / exploded view), significantly
+            (see the exploded view below), significantly
             reducing the need for new tooling and lowering redevelopment costs.
           </p>
         </div>
