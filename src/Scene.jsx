@@ -172,11 +172,12 @@ const Scene = () => {
             Role : User Research · CAD Modeling · Mechanical & Ergonomic Design
           </p>
           <p className="landing-p archivo-black-thin">
-            Tools : SolidWorks · KeyShot
+            Design Tools : SolidWorks(CAD) · KeyShot(Rendering & Animation) · Photoshop
           </p>
           <p className="landing-p archivo-black-thin">
             Duration : 2 Months
           </p>
+          
         </div>
       </div>
 
