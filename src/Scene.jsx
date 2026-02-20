@@ -165,9 +165,23 @@ const Scene = () => {
           <h3 className="subtitle archivo-black-regular mb-3">
             High-Performance Airsoft Pistol Design
           </h3>
-          <p className="landing-p archivo-black-thin">
-            Project Type : Platform Extension Concept (Based on Trinity Hi-CAPA)
-          </p>
+        <p className="landing-p archivo-black-thin">
+  Project Type : Platform Extension Concept (Based on <a
+  href="https://trinity-bice-one.vercel.app/"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    color: "white",
+    textDecoration: "underline",
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "6px"
+  }}
+>
+  Trinity Hi-CAPA
+  <span style={{ fontSize: "0.9em" }}>↗</span>
+</a>)
+</p>
           <p className="landing-p archivo-black-thin">
             Role : User Research · CAD Modeling · Mechanical & Ergonomic Design
           </p>
@@ -190,6 +204,7 @@ const Scene = () => {
     height: "auto",
     objectFit: "contain",
     position: "absolute",
+     pointerEvents: "none", // 🔥 關鍵
     top: "11%",
     left: "50%",
     transform: "translateX(-50%)",
