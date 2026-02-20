@@ -195,7 +195,7 @@ export default function Research() {
                     <div className="d-flex flex-column flex-sm-row align-items-start mt-4 mb-3">
 
                         <div className="text-white rounded ms-sm-3 mb-5">
-                            <h2 className="fw-bold text-start mb-3">Project Overview</h2>
+                            <h2 className="fw-bold text-center mb-3">Project Overview</h2>
                             <p className="mb-4 text-start">
                                 In airsoft, pistols are often treated as secondary weapons, limited by their firepower compared to rifles and submachine guns. This project takes the Trinity Hi-Capa as its foundation and redesigns it as a primary combat pistol, engineered for submachine-gun-level performance—transforming the pistol from a support tool into a standalone battlefield weapon.
                             </p>
