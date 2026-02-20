@@ -6,95 +6,15 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Split Hicapa</title>
-  <style>
-    #global-loading {
-      position: fixed;
-      inset: 0;
-      background: 
-        url('/images/loadingbg.webp') center center no-repeat,
-        linear-gradient(to bottom right, #000000, #1a1a1a);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      color: white;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 3rem;
-      letter-spacing: 1px;
-      z-index: 9999;
-      overflow: hidden;
-    }
-
-    /* 🔥 loading文字一開始透明，並且不可見 */
-    .loading-text {
-      opacity: 0;
-      visibility: hidden;
-      font-weight: bold;
-      position: relative;
-      z-index: 1;
-      transition: opacity 0.5s ease; /* 0.5秒淡入 */
-    }
-
-    /* 🔥 加上show class時觸發fade in */
-    .loading-text.show {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    /* 🔥 閃爍動畫 */
-    @keyframes blink {
-      0%, 100% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0.65;
-      }
-    }
-
-    /* 🔥 開始閃爍 */
-    .blinking {
-      animation: blink 1.8s infinite ease-in-out;
-    }
-  </style>
 </head>
 
 <body>
-  <div id="global-loading">
-    <span class="loading-text" style="text-align:center; display:block;">
-      Loading weapon system...
-    </span>
-  </div>
   <div id="root"></div>
 
   <script type="module" src="/src/main.jsx"></script>
-
-  <!-- 🔥 控制loading文字出現與閃爍 -->
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const loadingText = document.querySelector('.loading-text');
-      setTimeout(() => {
-        loadingText.classList.add('show'); // 0.8秒後淡入
-        setTimeout(() => {
-          loadingText.classList.add('blinking'); // 淡入完成後再開始閃爍
-        }, 400); // 0.5秒淡入結束
-      }, 800); // 0.8秒延遲
-    });
-  </script>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -40,8 +40,7 @@ function App() {
       setShowLoading(false);
 
       // ⛔ 移除 index.html 中的初始 loading 畫面
-      const loader = document.getElementById("global-loading");
-      if (loader) loader.remove();
+
     });
   }, []);
 
