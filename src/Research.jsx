@@ -283,7 +283,7 @@ export default function Research() {
     style={{
       maxWidth: "100%",
       height: "auto",
-          opacity: 1
+          opacity: 1 
 
     }}
   />
