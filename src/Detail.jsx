@@ -28,9 +28,9 @@ export default function Detail() {
     { key: "ThumbSafety", x: 48, y: 22.9, desc: "Stainless Steel Ambidextrous Thumb safety", img: "./images/thumbsafty.webp" },
       { key: "HopUp", x: 59.5, y: 47, desc: "Patented Quickly-Adjustable Hop-Up System", img: "./images/hop1.webp" },
    
-    { key: "Frame", x: 57.5, y: 66, desc: "Stainless Steel Middle Frame with Tactical Rail", img: "./images/light.webp" },
+    { key: "Frame", x: 57.5, y: 66, desc: "Zinc Alloy Die-Cast Middle Frame with Tactical Rail", img: "./images/light.webp" },
     { key: "Optic Mount", x: 47.5, y: 45.5, desc: "Fixed Optic Mount — stabilizing the optic independently from slide movement for improved durability and faster target acquisition.", img: "./images/slide.jpg" },
-     { key: "Slide", x: 52.4, y: 18.1, desc: "7075 Aluminum Alloy Light-Weight Split Slide.", img: "./images/slide.jpg", img: "./images/opticmount1.webp" },
+     { key: "Slide", x: 52.4, y: 18.1, desc: "Cast Aluminum Alloy Light-Weight Slide", img: "./images/slide.jpg", img: "./images/opticmount1.webp" },
    { key: "Barrel", x: 31.6, y: 79.1, desc: "A 6.5-inch fixed inner barrel — with a length approaching that of a submachine gun — significantly extends the effective range to 50 meters!", img: "./images/slide.jpg", img: "./images/opticmount1.webp" },
   ];
 

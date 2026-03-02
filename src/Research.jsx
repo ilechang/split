@@ -274,6 +274,22 @@ export default function Research() {
                         </div>
                     </div>
 
+                    <div className="text-center my-5 pt-3 pb-5">
+      <h2 className="text-center mt-5 fw-bold">Design Sketches</h2>
+  <img
+    src="/images/sketch.webp"
+    alt="Slide Serration Concept B"
+    className="img-fluid rounded shadow my-3"
+    style={{
+      maxWidth: "100%",
+      height: "auto",
+          opacity: 1
+
+    }}
+  />
+</div>
+
+
                    
                 </div>
             </div>
